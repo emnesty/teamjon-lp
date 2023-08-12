@@ -1,0 +1,21 @@
+button {
+  background-color: var(--primary);
+  border-radius: 0.8rem;
+  border-style: solid;
+  border-color: var(--primary);
+  padding: 16px 28px 16px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32.4rem;
+  height: 7.2rem;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background-color: var(--secondary);
+  }
+}
+span {
+  color: #0c111d;
+  font: 600 22px/28px "Kanit", sans-serif;
+  position: relative;
+}

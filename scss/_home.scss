@@ -1,0 +1,230 @@
+.s-hero {
+  background: url(/public/images/bg-pattern.png) no-repeat center;
+  background-attachment: fixed;
+  .container {
+    .logo {
+      margin-top: 32px;
+    }
+    width: 100%;
+    max-width: 128rem;
+    margin-bottom: 9.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .heading {
+      width: 100%;
+      max-width: 86.1rem;
+      margin-top: 6.4rem;
+      h1 {
+        color: var(--white);
+        text-align: center;
+        font-family: Kanit, sans-serif;
+        font-size: 6rem;
+        font-weight: 500;
+        line-height: 7.2rem; /* 120% */
+        letter-spacing: -0.12rem;
+      }
+    }
+    .supporting-text {
+      width: 100%;
+      max-width: 86.1rem;
+      margin-top: 2.4rem;
+      margin-bottom: 4.8rem;
+      p {
+        color: var(--gray-600);
+        text-align: center;
+        font-family: Kanit, sans-serif;
+        font-size: 2.2rem;
+        font-weight: 300;
+        line-height: 3rem; /* 136.364% */
+      }
+    }
+    .image-hero {
+      margin-top: 6.4rem;
+      width: 100%;
+      max-width: 121.6rem;
+    }
+  }
+}
+
+.s-teamjon {
+  margin-bottom: 96px;
+  .feature-tab {
+    border-style: solid;
+    border-color: var(--primary);
+    border-width: 0px 0px 0px 4px;
+    padding: 0px 24px;
+    display: flex;
+    flex-direction: column;
+  }
+  .container {
+    width: 100%;
+    max-width: 128rem;
+    .top-part {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 76.8rem;
+      gap: 2rem;
+      h1 {
+        color: var(--white);
+        font-family: Kanit, sans-serif;
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 44px; /* 122.222% */
+        letter-spacing: -0.72px;
+      }
+      p {
+        color: var(--gray-600);
+        font-family: Kanit;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 30px; /* 150% */
+      }
+    }
+    .bottom-part {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 128rem;
+      margin-top: 64px;
+      .bottom-part-left {
+        ul {
+          li {
+            &:not(:last-child) {
+              margin-bottom: 32px;
+            }
+            .feature {
+              width: 100%;
+              max-width: 57.6rem;
+              h3 {
+                margin-bottom: 0.6rem;
+                color: var(--white);
+                font-family: Kanit, sans-serif;
+                font-size: 2.4rem;
+                font-weight: 600;
+                line-height: 3rem; /* 125% */
+              }
+              p {
+                color: var(--gray-600);
+                font-family: Kanit, sans-serif;
+                font-size: 1.8rem;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 2.4rem; /* 133.333% */
+              }
+            }
+          }
+        }
+      }
+      .bottom-part-right {
+        width: 100%;
+        max-width: 576px;
+      }
+    }
+  }
+}
+
+@include responsive(768px) {
+  .s-hero {
+    .container {
+      .heading {
+        h1 {
+          font-size: 5rem;
+        }
+      }
+    }
+  }
+  .s-teamjon {
+    .container {
+      .top-part {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .heading {
+          text-align: center;
+        }
+        .supporting-text {
+          margin-bottom: 32px;
+          text-align: center;
+          p {
+            font-size: 24px;
+          }
+        }
+      }
+      .bottom-part {
+        display: flex;
+        flex-direction: column;
+        .bottom-part-right {
+          margin-top: 64px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            left: 40px;
+            position: relative;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include responsive(430px) {
+  .s-hero {
+    .container {
+      margin-top: 4.6rem;
+      .supporting-text {
+        margin-top: 5.4rem;
+        p {
+          font-size: 18px;
+          line-height: 24px;
+        }
+      }
+      .heading {
+        margin-top: 4.4rem;
+        h1 {
+          font-size: 42px;
+          line-height: 4.5rem;
+        }
+      }
+    }
+  }
+}
+
+@include responsive(375px) {
+  .s-hero {
+    .container {
+      margin-top: 4.6rem;
+      .supporting-text {
+        margin-top: 5.4rem;
+        p {
+          font-size: 20px;
+          line-height: 24px;
+        }
+      }
+      .heading {
+        margin-top: 4.4rem;
+        h1 {
+          font-size: 3.8rem;
+          line-height: 4.5rem;
+        }
+      }
+    }
+  }
+  .s-teamjon {
+    .container {
+      .bottom-part {
+        .bottom-part-right {
+          img {
+            left: 25px;
+            position: relative;
+          }
+        }
+      }
+    }
+  }
+}
