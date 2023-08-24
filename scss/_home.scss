@@ -4,6 +4,8 @@
   .container {
     .logo {
       margin-top: 32px;
+      width: 100%;
+      max-width: 400px;
     }
     width: 100%;
     max-width: 128rem;
@@ -45,7 +47,7 @@
       width: 100%;
       max-width: 121.6rem;
       img {
-        // border: 2px solid var(--secondary);
+        border: 2px solid var(--primary);
         border-radius: 8px;
       }
     }
