@@ -44,6 +44,10 @@
       margin-top: 6.4rem;
       width: 100%;
       max-width: 121.6rem;
+      img {
+        // border: 2px solid var(--secondary);
+        border-radius: 8px;
+      }
     }
   }
 }
@@ -210,6 +214,21 @@
             left: 40px;
             position: relative;
           }
+        }
+      }
+    }
+  }
+  .s-swiper {
+    .container {
+      .text {
+        h1 {
+          text-align: center;
+        }
+      }
+      .supporting-text {
+        p {
+          text-align: center;
+          font-size: 18px;
         }
       }
     }
