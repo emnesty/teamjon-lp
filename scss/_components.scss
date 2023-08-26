@@ -19,3 +19,210 @@ span {
   font: 600 22px/28px "Kanit", sans-serif;
   position: relative;
 }
+
+.button-card {
+  background-color: var(--secondary);
+  border-radius: 0.8rem;
+  border-style: solid;
+  border-color: var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 320px;
+  height: 48px;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background-color: var(--secondary);
+  }
+  span {
+    // color: #0c111d;
+    color: var(--base-white, #fff);
+    font-family: Kanit, sans-serif;
+    font-size: 16px;
+  }
+}
+
+.card-pricing {
+  width: 100%;
+  max-width: 384px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 16px;
+  padding: 32px 32px 0px 32px;
+  border: 2px solid var(--secondary);
+  background: var(--background-default);
+  box-shadow: 0px 4px 6px -2px rgba(16, 24, 40, 0.03), 0px 12px 16px -4px rgba(16, 24, 40, 0.08);
+  .featured-icon {
+    margin-bottom: 20px;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 28px;
+    border: 4px solid #1d2939;
+    background: var(--background-default);
+  }
+  .heading {
+    h3 {
+      color: #fff;
+      font-family: Kanit, sans-serif;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 30px;
+    }
+  }
+  .price {
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+      color: var(--primary);
+      font-family: Kanit, sans-serif;
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 60px;
+      letter-spacing: -0.96px;
+    }
+    span {
+      color: #fff;
+      text-align: center;
+      font-family: Kanit, sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+    }
+  }
+  .check-item {
+    margin-bottom: 64px;
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      li {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        img {
+          width: 24px;
+          height: 24px;
+        }
+        span {
+          color: #fff;
+          font-family: Kanit, sans-serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+  .card-footer {
+    border-radius: 0px 0px 18px 16px;
+    padding: 32px;
+    background-color: var(--gray-50, #f9fafb1c);
+  }
+}
+
+.card-pricing-popular {
+  width: 100%;
+  max-width: 384px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 16px;
+  padding: 32px 32px 0px 32px;
+  border: 2px solid var(--secondary);
+  background: var(--background-default);
+  box-shadow: 0px 4px 6px -2px rgba(16, 24, 40, 0.03), 0px 12px 16px -4px rgba(16, 24, 40, 0.08);
+  .banner {
+    padding: 8px 12px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    border: 4px solid #1d2939;
+    margin-bottom: 16px;
+    span {
+      color: var(--primary);
+      text-align: center;
+      font-family: Inter;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 20px;
+    }
+  }
+  .heading {
+    h3 {
+      color: #fff;
+      font-family: Kanit, sans-serif;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 30px;
+    }
+  }
+  .price {
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+      color: var(--primary);
+      font-family: Kanit, sans-serif;
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 60px;
+      letter-spacing: -0.96px;
+    }
+    span {
+      color: #fff;
+      text-align: center;
+      font-family: Kanit, sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+    }
+  }
+  .check-item {
+    margin-bottom: 64px;
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      li {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        img {
+          width: 24px;
+          height: 24px;
+        }
+        span {
+          color: #fff;
+          font-family: Kanit, sans-serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+  .card-footer {
+    border-radius: 0px 0px 18px 16px;
+    padding: 32px;
+    background-color: var(--gray-50, #f9fafb1c);
+  }
+}

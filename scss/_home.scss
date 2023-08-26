@@ -159,7 +159,38 @@
         font-family: Kanit, sans-serif;
         font-size: 36px;
         font-weight: 600;
-        line-height: 44px; /* 122.222% */
+        line-height: 44px;
+        letter-spacing: -0.72px;
+      }
+    }
+    .supporting-text {
+      margin-bottom: 2rem;
+      p {
+        color: var(--gray-600);
+        font-family: Kanit, sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 30px; /* 150% */
+      }
+    }
+  }
+}
+
+.s-pricing {
+  margin-bottom: 64px;
+  .container {
+    .cards {
+      display: flex;
+      justify-content: space-between;
+    }
+    .text {
+      h1 {
+        color: var(--white);
+        font-family: Kanit, sans-serif;
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 44px;
         letter-spacing: -0.72px;
       }
     }
@@ -171,12 +202,13 @@
         font-size: 20px;
         font-style: normal;
         font-weight: 300;
-        line-height: 30px; /* 150% */
+        line-height: 30px;
       }
     }
   }
 }
 
+// Responsivo
 @include responsive(768px) {
   .s-hero {
     .container {
@@ -257,6 +289,27 @@
       }
     }
   }
+  .s-pricing {
+    .container {
+      .text {
+        h1 {
+          text-align: center;
+        }
+      }
+      .supporting-text {
+        p {
+          text-align: center;
+        }
+      }
+      .cards {
+        flex-direction: column;
+        gap: 32px;
+        .card-footer {
+          background-color: transparent;
+        }
+      }
+    }
+  }
 }
 
 @include responsive(375px) {
@@ -287,6 +340,27 @@
             left: 25px;
             position: relative;
           }
+        }
+      }
+    }
+  }
+  .s-pricing {
+    .container {
+      .text {
+        h1 {
+          text-align: center;
+        }
+      }
+      .supporting-text {
+        p {
+          text-align: center;
+        }
+      }
+      .cards {
+        flex-direction: column;
+        gap: 32px;
+        .card-footer {
+          background-color: transparent;
         }
       }
     }
