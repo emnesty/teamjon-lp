@@ -215,6 +215,23 @@
   }
 }
 
+footer {
+  .container {
+    .content {
+      padding: 48px 0px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      span {
+        color: var(--gray-25, #fcfcfd4a);
+        text-align: right;
+        font-family: Kanit, sans-serif;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
 // Responsivo
 @include responsive(768px) {
   .s-hero {
@@ -270,6 +287,17 @@
         p {
           text-align: center;
           font-size: 18px;
+        }
+      }
+    }
+  }
+  footer {
+    .container {
+      .content {
+        flex-direction: column;
+        gap: 16px;
+        span {
+          font-size: 14px;
         }
       }
     }
