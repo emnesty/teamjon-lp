@@ -183,6 +183,13 @@
     .cards {
       display: flex;
       justify-content: space-between;
+      .card-pricing-popular {
+        .heading {
+          text-align: center;
+          width: 100%;
+          max-width: 236px;
+        }
+      }
     }
     .text {
       h1 {
@@ -195,7 +202,7 @@
       }
     }
     .supporting-text {
-      margin-bottom: 2rem;
+      margin-bottom: 64px;
       p {
         color: var(--gray-600);
         font-family: Kanit;
