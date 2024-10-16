@@ -44,7 +44,7 @@ span {
 
 .card-pricing {
   width: 100%;
-  max-width: 384px;
+  max-width: 530px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,7 +52,8 @@ span {
   padding: 32px 32px 0px 32px;
   border: 2px solid var(--secondary);
   background: var(--background-default);
-  box-shadow: 0px 4px 6px -2px rgba(16, 24, 40, 0.03), 0px 12px 16px -4px rgba(16, 24, 40, 0.08);
+  box-shadow: 0px 4px 6px -2px rgba(16, 24, 40, 0.03),
+    0px 12px 16px -4px rgba(16, 24, 40, 0.08);
   .featured-icon {
     margin-bottom: 20px;
     display: flex;
@@ -101,6 +102,7 @@ span {
   }
   .check-item {
     margin-bottom: 94px;
+    width: 100%;
     ul {
       display: flex;
       flex-direction: column;
@@ -125,9 +127,35 @@ span {
     }
   }
   .card-footer {
-    border-radius: 0px 0px 18px 16px;
-    padding: 32px;
-    background-color: var(--gray-50, #f9fafb1c);
+    width: 100%;
+    padding: 2rem;
+    background-color: rgba(249, 250, 251, 0.05);
+
+    .button-card {
+      width: 100%;
+      background-color: var(--secondary);
+      border-radius: 0.8rem;
+      padding: 1.6rem 2.4rem;
+      border: none;
+      transition: all 0.3s ease;
+      cursor: pointer;
+
+      &:hover {
+        background-color: var(--primary);
+        transform: translateY(-2px);
+      }
+
+      .text {
+        span {
+          color: var(--base-white, #fff);
+          font-family: Kanit, sans-serif;
+          font-size: 1.6rem;
+          font-weight: 600;
+          line-height: 2.4rem;
+          text-transform: uppercase;
+        }
+      }
+    }
   }
 }
 
@@ -141,7 +169,8 @@ span {
   padding: 32px 32px 0px 32px;
   border: 2px solid var(--secondary);
   background: var(--background-default);
-  box-shadow: 0px 4px 6px -2px rgba(16, 24, 40, 0.03), 0px 12px 16px -4px rgba(16, 24, 40, 0.08);
+  box-shadow: 0px 4px 6px -2px rgba(16, 24, 40, 0.03),
+    0px 12px 16px -4px rgba(16, 24, 40, 0.08);
   .banner {
     padding: 8px 12px;
     width: 100%;
@@ -224,5 +253,267 @@ span {
     border-radius: 0px 0px 18px 16px;
     padding: 32px;
     background-color: var(--gray-50, #f9fafb1c);
+  }
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 4rem;
+
+  .card-pricing {
+    flex: 1 1 300px; // Permite que os cards cresçam e encolham, com um mínimo de 300px
+    max-width: 400px; // Limita a largura máxima para manter a legibilidade
+    background-color: var(--gray-800);
+    border-radius: 1.2rem;
+    padding: 4rem 3rem;
+    transition: all 0.3s ease;
+
+    @media (max-width: 768px) {
+      flex-basis: 100%; // Em telas menores, ocupa toda a largura
+      padding: 3rem 2rem; // Reduz o padding em telas menores
+    }
+
+    &:hover {
+      transform: translateY(-1rem);
+    }
+
+    .featured-icon {
+      margin-bottom: 3.2rem;
+    }
+
+    .heading {
+      h3 {
+        font-weight: 600;
+        font-size: 2.4rem;
+        line-height: 120%;
+        color: var(--white);
+        margin-bottom: 1.6rem;
+
+        @media (max-width: 768px) {
+          font-size: 2rem; // Reduz o tamanho da fonte em telas menores
+        }
+      }
+    }
+
+    .price {
+      margin-bottom: 3.2rem;
+
+      h1 {
+        font-weight: 600;
+        font-size: 4rem;
+        line-height: 120%;
+        color: var(--white);
+        margin-bottom: 0.8rem;
+
+        @media (max-width: 768px) {
+          font-size: 3.2rem; // Reduz o tamanho da fonte em telas menores
+        }
+      }
+
+      span {
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 150%;
+        color: var(--gray-200);
+      }
+    }
+
+    .check-item {
+      margin-bottom: 3.2rem;
+
+      ul {
+        li {
+          display: flex;
+          align-items: flex-start;
+          gap: 1.4rem;
+          &:not(:last-child) {
+            margin-bottom: 2.4rem;
+          }
+          span {
+            font-weight: 400;
+            font-size: 1.8rem;
+            line-height: 150%;
+            color: var(--white);
+
+            @media (max-width: 768px) {
+              font-size: 1.6rem; // Reduz o tamanho da fonte em telas menores
+            }
+          }
+        }
+      }
+    }
+
+    .card-footer {
+      .button-card {
+        width: 100%;
+        background-color: var(--yellow);
+        border-radius: 0.4rem;
+        padding: 1.6rem 2.4rem;
+        border: none;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        &:hover {
+          background-color: var(--yellow-hover);
+        }
+        .text {
+          span {
+            font-weight: 600;
+            font-size: 1.8rem;
+            line-height: 2.7rem;
+            color: var(--gray-900);
+
+            @media (max-width: 768px) {
+              font-size: 1.6rem; // Reduz o tamanho da fonte em telas menores
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Variáveis (adicione isso ao seu arquivo de variáveis ou no topo deste arquivo)
+:root {
+  --card-bg: #1e1e1e;
+  --card-border: #333333;
+  --card-highlight: #ffd700;
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+  --button-bg: #ffd700;
+  --button-text: #000000;
+  --button-hover: #ffc700;
+}
+
+.pricing-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem; // Aumentado o espaço entre os cards
+  padding: 3rem; // Aumentado o padding geral
+
+  .pricing-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 1.5rem; // Aumentado o border-radius
+    padding: 3rem; // Aumentado o padding interno
+    width: 100%;
+    max-width: 450px; // Aumentado a largura máxima
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-10px); // Aumentado o efeito de hover
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); // Sombra mais pronunciada
+    }
+
+    &__header {
+      text-align: center;
+      margin-bottom: 3rem; // Aumentado o espaço após o cabeçalho
+
+      h3 {
+        color: var(--text-primary);
+        font-size: 2.2rem; // Aumentado o tamanho da fonte
+        margin-bottom: 1rem; // Aumentado o espaço após o título
+      }
+
+      .price {
+        color: var(--card-highlight);
+        font-size: 3.5rem; // Aumentado o tamanho do preço
+        font-weight: bold;
+      }
+
+      .period {
+        color: var(--text-secondary);
+        font-size: 1.2rem; // Aumentado o tamanho da fonte
+      }
+    }
+
+    &__features {
+      flex-grow: 1;
+      margin-bottom: 3rem; // Aumentado o espaço antes do botão
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+
+        li {
+          color: var(--text-secondary);
+          margin-bottom: 1.5rem; // Aumentado o espaço entre os itens
+          display: flex;
+          align-items: center;
+          font-size: 1.1rem; // Aumentado o tamanho da fonte
+
+          &::before {
+            content: "✓";
+            color: var(--card-highlight);
+            margin-right: 1rem; // Aumentado o espaço entre o ícone e o texto
+            font-weight: bold;
+            font-size: 1.3rem; // Aumentado o tamanho do ícone
+          }
+        }
+      }
+    }
+
+    &__footer {
+      .btn-subscribe {
+        width: 100%;
+        padding: 1.2rem; // Aumentado o padding do botão
+        background-color: var(--button-bg);
+        color: var(--button-text);
+        border: none;
+        border-radius: 0.8rem; // Aumentado o border-radius do botão
+        font-size: 1.2rem; // Aumentado o tamanho da fonte do botão
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+
+        &:hover {
+          background-color: var(--button-hover);
+          transform: translateY(-3px); // Adicionado efeito de elevação no hover
+        }
+      }
+    }
+
+    &--popular {
+      border-color: var(--card-highlight);
+      position: relative;
+      overflow: hidden;
+
+      &::before {
+        content: "Popular";
+        position: absolute;
+        top: 2rem; // Ajustado a posição
+        right: -4rem; // Ajustado a posição
+        background-color: var(--card-highlight);
+        color: var(--button-text);
+        padding: 0.8rem 4rem; // Aumentado o tamanho da faixa
+        transform: rotate(45deg);
+        font-size: 1rem; // Aumentado o tamanho da fonte
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .pricing-cards {
+    .pricing-card {
+      max-width: calc(50% - 3rem); // 2 cards por linha em telas médias
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing-cards {
+    flex-direction: column;
+    align-items: center;
+
+    .pricing-card {
+      max-width: 100%;
+    }
   }
 }
